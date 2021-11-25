@@ -1,13 +1,13 @@
 package com.hackathon.playground.domain;
 
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import java.io.Serializable;
 
+@AllArgsConstructor
+@NoArgsConstructor
 public class PlayTotalID implements Serializable {
-    private User user_idx;
+    private Long user_idx;
 
-    private Game game_idx;
+    private Long game_idx;
 }

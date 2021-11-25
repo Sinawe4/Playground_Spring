@@ -12,7 +12,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Builder
 @IdClass(PlayTotalID.class)
-public class PlayedTotal implements Serializable {
+public class PlayedTotal{
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "userIdx")
