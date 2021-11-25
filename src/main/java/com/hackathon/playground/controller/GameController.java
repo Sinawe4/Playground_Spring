@@ -6,6 +6,7 @@ import com.hackathon.playground.dto.GameEndDto;
 import com.hackathon.playground.service.GameService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +19,7 @@ public class GameController {
     private final GameService gameService;
 
     @PostMapping("/end")
-    public CommonResult gameEnd(GameEndDto gameEndDto){
+    public CommonResult gameEnd(@RequestBody GameEndDto gameEndDto){
         System.out.println(gameEndDto.getUsername());
         gameService.GameEnd(gameEndDto);
         return responseService.getSuccessResult();
