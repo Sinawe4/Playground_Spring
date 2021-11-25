@@ -19,6 +19,7 @@ public class GameController {
 
     @PostMapping("/end")
     public CommonResult gameEnd(GameEndDto gameEndDto){
+        System.out.println(gameEndDto.getUsername());
         gameService.GameEnd(gameEndDto);
         return responseService.getSuccessResult();
     }

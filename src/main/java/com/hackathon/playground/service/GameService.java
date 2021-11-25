@@ -29,13 +29,12 @@ public class GameService {
         playedTotalRepository.save(playTotalDto.toEntity());
 
         if (gameEndDto.getRank() > 0){
-            switch (gameEndDto.getRank()){
-                case 1 : user.setGold(user.getGold()+10000);
-                    break;
-                case 2 : user.setGold(user.getGold()+7000);
-                    break;
-                case 3 : user.setGold(user.getGold()+5000);
-                    break;
+            if (gameEndDto.getRank() == 1) {
+                user.setGold(user.getGold() + 10000);
+            } else if (gameEndDto.getRank() == 2) {
+                user.setGold(user.getGold() + 7000);
+            } else if (gameEndDto.getRank() == 3) {
+                user.setGold(user.getGold() + 5000);
             }
         }
         else{
