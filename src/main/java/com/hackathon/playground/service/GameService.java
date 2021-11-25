@@ -45,5 +45,6 @@ public class GameService {
                 user.setGold(user.getGold()+4000);
             }
         }
+        userRepository.save(user);
     }
 }
