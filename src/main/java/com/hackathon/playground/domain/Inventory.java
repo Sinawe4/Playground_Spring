@@ -11,8 +11,8 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Embeddable
-public class Inventory implements Serializable {
+@IdClass(InventoryID.class)
+public class Inventory {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "userIdx")
     @Id
