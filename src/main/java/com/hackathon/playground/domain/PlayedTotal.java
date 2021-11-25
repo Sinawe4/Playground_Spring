@@ -11,8 +11,9 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Embeddable
+@IdClass(PlayTotalID.class)
 public class PlayedTotal implements Serializable {
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "userIdx")
     @Id

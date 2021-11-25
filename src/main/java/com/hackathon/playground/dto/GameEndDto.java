@@ -14,5 +14,5 @@ public class GameEndDto {
 
     private Long score;
 
-    private int rank;
+    private Long rank;
 }
