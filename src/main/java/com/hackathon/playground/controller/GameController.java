@@ -20,7 +20,6 @@ public class GameController {
 
     @PostMapping("/end")
     public CommonResult gameEnd(@RequestBody GameEndDto gameEndDto){
-        System.out.println(gameEndDto.getUsername());
         gameService.GameEnd(gameEndDto);
         return responseService.getSuccessResult();
     }

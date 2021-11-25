@@ -8,6 +8,7 @@ import com.hackathon.playground.service.EmotionService;
 import com.hackathon.playground.service.GameService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,7 +20,7 @@ public class EmotionController {
     private final EmotionService emotionService;
 
     @PostMapping("/save")
-    public CommonResult emotionSave(EmotionDto emotionDto){
+    public CommonResult emotionSave(@RequestBody EmotionDto emotionDto){
         emotionService.emotionSave(emotionDto);
         return responseService.getSuccessResult();
     }
