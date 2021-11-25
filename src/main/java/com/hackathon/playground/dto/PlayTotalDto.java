@@ -11,11 +11,11 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class PlayTotalDto {
-    User user;
+    private User user;
 
-    Game game;
+    private Game game;
 
-    Long score;
+    private Long score;
 
     public PlayedTotal toEntity(){
         return PlayedTotal.builder()
